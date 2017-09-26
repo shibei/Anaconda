@@ -421,7 +421,7 @@ def chineseNumber(x):
 
 def englishNumber(x):
     num = ['ZERO', 'ONE', 'TWO', 'THREE', 'FOUR',
-           'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'TEN']
+           'FIVE', 'SIX', 'SEVEN', 'EIGHT','NINE','TEN']
     return num[x]
 
 
