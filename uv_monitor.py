@@ -101,7 +101,7 @@ def reColumns(df, columns=['hos_id', 'dhcp', 'portal',
     return df
 
 
-def get400Data(day, cycle, path=r'/root/ipython/400与回访医院报修记录单统计表 (更改版).xlsx'):
+def get400Data(day, cycle, path=r'/var/400data/400.xlsx'):
     day1 = getDate(day)
     day2 = getDate(day+cycle)
     data400 = pd.read_excel(path)
