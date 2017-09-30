@@ -154,6 +154,7 @@ def getRawData(day, cycle):
     day0 = str(getDate(0))
     day1 = str(getDate(day))
     day2 = str(getDate(day+cycle))
+    dayX = '2017-09-26'
 
     DbList = getDbInfo(r'/root/ipython/user_list.xlsx', r'db_user')
     uvBase = DbList['uvBase']
@@ -177,7 +178,7 @@ def getRawData(day, cycle):
     `log_date` DESC" % (day2, day1)
 
     devBase['comm']['devInfo'] = "SELECT %s FROM `dev_info` \
-    WHERE `date` = '%s' ORDER BY `clock` DESC LIMIT 0, 1000" % (devInfoFields, day0)
+    WHERE `date` = '%s' ORDER BY `clock` DESC LIMIT 0, 1000" % (devInfoFields, dayX)
 
     hosBase['comm']['totalInfo'] = "SELECT %s FROM `TOTAL_INFO_T_%s`" % (
         totalInfoFields, day1.replace('-', ''))
@@ -491,7 +492,7 @@ def output(day=1, cycle=1, toEmail=True, toSql=True):
 
 
 def main():
-    output(1, 1)
+    output(1, 2)
     output(1, 4, toEmail=False)
 
 if __name__ == '__main__':
