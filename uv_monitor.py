@@ -492,8 +492,8 @@ def output(day=1, cycle=1, toEmail=True, toSql=True):
 
 
 def main():
-    output(1, 2)
-    output(1, 4, toEmail=False)
+    output(1, 1,toSql = False)
+    output(1, 4, toEmail=False,toSql = False)
 
 if __name__ == '__main__':
     main()
