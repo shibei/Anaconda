@@ -178,7 +178,7 @@ def getRawData(day, cycle):
     `log_date` DESC" % (day2, day1)
 
     devBase['comm']['devInfo'] = "SELECT %s FROM `dev_info` \
-    WHERE `date` = '%s' ORDER BY `clock` DESC LIMIT 0, 1000" % (devInfoFields, dayX)
+    WHERE `date` = '%s' ORDER BY `clock` DESC LIMIT 0, 1000" % (devInfoFields, day0)
 
     hosBase['comm']['totalInfo'] = "SELECT %s FROM `TOTAL_INFO_T_%s`" % (
         totalInfoFields, day1.replace('-', ''))
@@ -257,7 +257,7 @@ def getDateData(uvData, apData, day=1, cycle=7):
 # 依靠经验值来构建的决策树
 
 
-def decisionTree(data, rawData, apLimit=-0.1, forwardLimit=-0.4, globalLimit=-0.4):
+def decisionTree(data, rawData, apLimit=-0.4, forwardLimit=-0.4, globalLimit=-0.4):
     index = data.index  # 获得目录
     splitTerm0 = data[index[0]] <= globalLimit  # 分裂条件0
     if len(index) > 1:

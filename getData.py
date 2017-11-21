@@ -81,7 +81,7 @@ class DataList(object):
 
 
 urlHc = 'http://gbcom.hos-wifi.com:8888/ccsv3/rest/partner/bblink/routers'
-urlAbloomy = 'http://112.65.205.107/rest/partner/bblink/routers'
+urlAbloomy = 'http://112.65.205.107:8888/rest/partner/bblink/routers'
 
 while True:
 	try:
