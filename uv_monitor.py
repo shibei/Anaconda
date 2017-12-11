@@ -377,7 +377,7 @@ def analysis(day, cycle, apLimit=-0.1, forwardLimit=-0.4, globalLimit=-0.4):
     rate = ((uvDay1Lite.reindex(uvDay2Lite.index).fillna(0)-uvDay2Lite)/uvDay2Lite)
     troubleList = {}
     for hos in rate.index:
-        trouble = decisionTree(rate.loc[hos], rate.loc[hos], -0.1, -0.4, -0.4)
+        trouble = decisionTree(rate.loc[hos], rate.loc[hos], -0.4, -0.4, -0.4)
         troubleList[hos] = trouble
     statusSeries = pd.Series(troubleList)
     troubleHos = statusSeries[statusSeries != '正常']
